@@ -12,7 +12,7 @@ This is a mongodb cheetsheeet where almost all the commands of the mongo db are 
 | Rows | Document |
 | Coloums | Fields |
 
-### In MongoDB data are store in BSON not in JSON format because 
+### In MongoDB data are store in BSON not in JSON format
 
 
 
