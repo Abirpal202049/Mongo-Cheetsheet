@@ -21,12 +21,16 @@ This is a mongodb cheetsheeet where almost all the commands of the mongo db are 
 
 ### For invoking Mongo Doemon 
     mongod
+ 
 ### For starting the mongo shell 
     mongo
+
 ### To show all the database present in the Mongodb 
     show dbs
+    
 ### To create a new Database
     use students
+    
 ### To see the current database 
     db
 ### To delete the current database which we are in 
