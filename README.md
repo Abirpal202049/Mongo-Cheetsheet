@@ -67,3 +67,23 @@ This is a mongodb cheetsheeet where almost all the commands of the mongo db are 
     db.studentData.find().limit(2).sort({age : -1}).pretty()
 ### For finding only one document 
     db.studentData.findOne({age : 18})
+## Atomic / Update Operator
+| Atomic Operator | Use Of This Operator |
+| :-------- | :------- | 
+| $set | Updating the stored document without changing the prev. state of the document |
+| $inc | To increment and decrement on the numerical type variable |
+| $push | Push new field but it must be of ARRAY type field |
+| $eq     |    Matches values that are equal to the given value. |
+|$gt     |    Matches if values are greater than the given value.|
+|$lt     |    Matches if values are less than the given value.|
+|$gte    |    Matches if values are greater or equal to the given value.|
+|$lte    |    Matches if values are less or equal to the given value.|
+|$in     |    Matches any of the values in an array.|
+|$ne     |    Matches values that are not equal to the given value.|
+|$nin    |    Matches none of the values specified in an array.|
+
+### For finding a group of documents based on some condition
+    db.studentData.findOne({age : {$lte : 18}})
+
+
+# More Comming Soon...
