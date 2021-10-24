@@ -133,7 +133,11 @@ This is a mongodb cheetsheeet where almost all the commands of the mongo db are 
         })
 
 ### To append new data to the array type field
-    db.studentData.updateMany({age : {$lt : 19}} , {$push : {hobby : "Swimming"}})
+    db.studentData.updateMany(
+        {age : {$lt : 19}} , 
+        {
+            $push : {hobby : "Swimming"}
+        })
 
 
 
