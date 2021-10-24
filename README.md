@@ -176,4 +176,12 @@ This is a mongodb cheetsheeet where almost all the commands of the mongo db are 
     db.studentData.find(_id : studentid)
     db.studentData.findOne(_id : studentid).email
 
+### How to print all the documents using ForEach Loop
+If in your collection there is more than 20 documents then '.find()' function will display only the first 20 documents and to display the next 20 documents you have type 'it' to display more So, by using foreach loop you will see all the documents present in the collections
+
+    db.studentData.find().forEach((student) => {printjson(student)})
+
+### How to print specific field from all the documents 
+    db.studentData.find().forEach((student) => {printjson(student.email)})
+
 # More Comming Soon...
