@@ -151,5 +151,15 @@ This is a mongodb cheetsheeet where almost all the commands of the mongo db are 
 ### To delete the all the documents of the table
     db.studentData.deleteMany({})
 
+## Some Intermediate Commands Of Mongodb (Level  -2)
+
+### To group specific field togather (this will display the email and _id)
+    db.studentData.find({}, {email : 1})
+
+### To group specific field togather (_id by default is 1)
+    db.studentData.find({name : "Harry"}, {email : 1, _id : 0, name : 1})
+
+### Converting the group of data into an Array
+    db.studentData.find({name : "Harry"}, {email : 1, _id : 0}).toArray()
 
 # More Comming Soon...
