@@ -139,6 +139,17 @@ This is a mongodb cheetsheeet where almost all the commands of the mongo db are 
             $push : {hobby : "Swimming"}
         })
 
+### To delete One document using condition or filter
+    db.studentData.deleteOne({age : 17})
+
+### To delete the first document from the table
+    db.studentData.deleteOne({}})
+
+### To delete the first document from the table
+    db.studentData.deleteMany({fblogged : "Yes"})
+
+### To delete the all the documents of the table
+    db.studentData.deleteMany({})
 
 
 # More Comming Soon...
