@@ -125,7 +125,12 @@ This is a mongodb cheetsheeet where almost all the commands of the mongo db are 
     db.studentData.updateMany({} , {$inc : {age : 1}})
 
 ### For decrementing a numeric field in a document
-    db.studentData.updateMany({age : {$lt : 19}} , {$inc : {courseCount : -1}, $set {hobby : ["Painting", "Football"]}})
+    db.studentData.updateMany(
+        {age : {$lt : 19}} , 
+        {
+            $inc : {courseCount : -1}, 
+            $set {hobby : ["Painting", "Football"]}
+        })
 
 ### To append new data to the array type field
     db.studentData.updateMany({age : {$lt : 19}} , {$push : {hobby : "Swimming"}})
