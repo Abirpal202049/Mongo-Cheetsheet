@@ -105,6 +105,31 @@ This is a mongodb cheetsheeet where almost all the commands of the mongo db are 
 
 ### For finding a group of documents based on some condition
     db.studentData.findOne({age : {$lte : 18}})
+    
+### For updating a data based upon certain condition or filter (This will change the entire documents and fields by removing the prev. state of the document)
+    db.studentData.update({name : "Harry"} , {fblogged : "Yes" , age : 45})
+
+### For updating a data based upon certain condition or filter (This will change the documents and fields without changing the prev. state of the document)
+    db.studentData.updateOne({name : "Harry"} , {$set : {fblogged : "Yes" , age : 45}})
+
+### For upadting a group of document based on certain condition
+    db.studentData.updateMany({age : 24} , {$set : {courseCount : 2}})
+
+### For adding a new field to all the documents
+    db.studentData.updateMany({} , {$set : {registered : "Yes"}})
+
+### For renaming a field name 
+    db.studentData.updateMany({} , {$rename : {age : "student_age"}})
+
+### For incrementing a numeric field in a document
+    db.studentData.updateMany({} , {$inc : {age : 1}})
+
+### For decrementing a numeric field in a document
+    db.studentData.updateMany({age : {$lt : 19}} , {$inc : {courseCount : -1}, $set {hobby : ["Painting", "Football"]}})
+
+### To append new data to the array type field
+    db.studentData.updateMany({age : {$lt : 19}} , {$push : {hobby : "Swimming"}})
+
 
 
 # More Comming Soon...
