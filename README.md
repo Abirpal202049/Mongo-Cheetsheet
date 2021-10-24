@@ -183,5 +183,3 @@ If in your collection there is more than 20 documents then '.find()' function wi
 
 ### How to print specific field from all the documents 
     db.studentData.find().forEach((student) => {printjson(student.email)})
-
-# More Comming Soon...
