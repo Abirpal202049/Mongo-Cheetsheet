@@ -162,4 +162,18 @@ This is a mongodb cheetsheeet where almost all the commands of the mongo db are 
 ### Converting the group of data into an Array
     db.studentData.find({name : "Harry"}, {email : 1, _id : 0}).toArray()
 
+
+### To get a perticular data from a document
+    db.studentData.findOne({name : "Adesh"}).email
+    db.studentData.findOne({name : "Adesh"}).age
+    db.studentData.findOne({name : "Adesh"}).hobby[1]
+
+### How to store a data into a variable
+    var studentid = db.studentData.findOne({name : "Travour"})._id
+    studentid
+
+### How to fetch data from the variable (studentid)
+    db.studentData.find(_id : studentid)
+    db.studentData.findOne(_id : studentid).email
+
 # More Comming Soon...
